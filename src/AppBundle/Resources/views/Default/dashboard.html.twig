@@ -61,7 +61,7 @@
 
 {% block content %}
     <div class="container-fluid">
-        <div class="row d-flex {#justify-content-between#} notification-content">
+        <div class="row d-flex notification-content">
             <div class="notification-block mt-5">
                 <div class="notification-icon notification-icon-activities">
                     <i class="fa fa-book fa-3x"></i>
@@ -90,7 +90,7 @@
 
             <div class="notification-block mt-5">
                 <div class="notification-icon notification-icon-ressouces">
-                    <i class="fa fa-leaf fa-3x"></i>
+                    <i class="fa fa-calendar-check-o fa-3x"></i>
                 </div>
 
                 <div class="notification-text">Ressources nécessaires du mois</div>
@@ -169,7 +169,7 @@
                     <th scope="col">Doc.</th>
                     <th scope="col">Début/Durée</th>
                     <th scope="col">Début/Durée</th>
-                    <th scope="col">Tout <i class="fa fa-square-o"></i></th>
+                    <th scope="col" class="text-center">Tout <i class="fa fa-square-o"></i></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -184,7 +184,7 @@
                         <td><i class="fa fa-file-o"></i></td>
                         <td>15/06/2018 11:30 - 30min</td>
                         <td>domdo</td>
-                        <td><i class="fa fa-square-o"></i></td>
+                        <td class="text-center"><i class="fa fa-square-o"></i></td>
                     </tr>
                 {% endfor %}
                 </tbody>
