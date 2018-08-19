@@ -6,14 +6,8 @@
     color: #787878;
 }
 
-@media (min-width: 768px) {
-    .notification-content {
-        justify-content: center;
-    }
-}
-
 .notification-content {
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .notification-block {
