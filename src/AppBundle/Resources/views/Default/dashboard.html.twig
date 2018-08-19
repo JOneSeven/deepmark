@@ -3,6 +3,7 @@
 {% block title %}Dashboard{% endblock %}
 
 {% block css %}
+    <link rel="stylesheet" href="{{ asset('bundles/app/css/jquery-ui.css') }}">
     <link rel="stylesheet" href="{{ asset('bundles/app/css/styles_dashboard.css') }}">
 {% endblock %}
 
@@ -97,7 +98,9 @@
                 <div class="notification-number">41</div>
 
                 <div class="notification-footer">
-                    <a href="#" class="btn-color-1">Voir toutes validations<i class="ml-2 fa fa-angle-double-right"></i></a>
+                    <div id="slider-notification-range">
+                        <div id="custom-handle" class="ui-slider-handle"></div>
+                    </div>
                 </div>
             </div>
 
@@ -205,4 +208,5 @@
 
 {% block script %}
     <script src="{{ asset('bundles/app/js/script_dashboard.js') }}"></script>
+    <script src="{{ asset('bundles/app/js/jquery-ui.js') }}"></script>
 {% endblock %}

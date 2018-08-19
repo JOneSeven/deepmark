@@ -8,4 +8,16 @@ $(document).ready(function () {
         if (currentInputValue === '1') currentInput.closest('td').find('span').html('A faire');
         if (currentInputValue === '2') currentInput.closest('td').find('span').html('Effectuée');
     });
+
+    $(function () {
+        let handle = $("#custom-handle");
+        $("#slider-notification-range").slider({
+            create: function () {
+                handle.text($(this).slider("value"));
+            },
+            slide: function (event, ui) {
+                handle.text(ui.value);
+            }
+        });
+    });
 });

@@ -72,6 +72,132 @@
     color: #f5ba45;
 }
 
+/* Notification ressources range */
+
+input.notification-range[type=range] {
+    -webkit-appearance: none;
+    background: none;
+    width: 100%;
+}
+
+input.notification-range[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    margin-top: -5px;
+    background: #f5ba45;
+    position: relative;
+}
+
+input.notification-range[type=range]::-ms-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    margin-top: -5px;
+    background: #f5ba45;
+    position: relative;
+}
+
+input.notification-range[type=range]::-moz-range-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    margin-top: -5px;
+    background: #f5ba45;
+    position: relative;
+}
+
+input.notification-range[type=range]::-webkit-slider-runnable-track {
+    height: 15px;
+    border: none;
+    background-image: linear-gradient(to right, #a63433, #9c581e, #887625, #6f8e48, #55a177);
+    border-radius: 15px;
+}
+
+input.notification-range[type=range]::-ms-track {
+    height: 15px;
+    border: none;
+    background-image: linear-gradient(to right, #a63433, #9c581e, #887625, #6f8e48, #55a177);
+    border-radius: 15px;
+}
+
+input.notification-range[type=range]::-moz-range-track {
+    height: 15px;
+    border: none;
+    background-image: linear-gradient(to right, #a63433, #9c581e, #887625, #6f8e48, #55a177);
+    border-radius: 15px;
+}
+
+input.notification-range[type=range]:focus {
+    outline: none;
+}
+
+input.notification-range[type=range]:focus::-webkit-slider-thumb:after {
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background: #eee;
+    background-image: linear-gradient(to right, #a63433, #9c581e, #887625, #6f8e48, #55a177);
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+input.notification-range[type=range]:focus::-ms-thumb:after {
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background: #eee;
+    background-image: linear-gradient(to right, #a63433, #9c581e, #887625, #6f8e48, #55a177);
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+input.notification-range[type=range]:focus::-moz-range-thumb:after {
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #eee;
+    background-image: linear-gradient(to right, #a63433, #9c581e, #887625, #6f8e48, #55a177);
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+#slider-notification-range{
+    height: 25px;
+    border: none;
+    background-image: linear-gradient(to right, #a63433, #9c581e, #887625, #6f8e48, #55a177);
+    border-radius: 15px;
+}
+
+#custom-handle {
+    width: 40px;
+    height: 40px;
+    top: 20%;
+    border: 0;
+    border-radius: 50%;
+    margin-top: -.8em;
+    text-align: center;
+    background: #f5ba45;
+    color: #fff;
+    line-height: 40px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.10);
+}
+
+#custom-handle:focus {
+    outline: none;
+}
+
 .second-content {
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.10);
     border-radius: 5px;
@@ -106,7 +232,6 @@
     position: relative;
     top: -20px;
     padding: 0;
-    /*padding-left: 10px;*/
     border-radius: 5px;
     text-align: center;
 }
@@ -151,34 +276,12 @@ input.statutrange[type=range] {
     width: 70px;
 }
 
-input.statutrange[type=range]::-webkit-slider-runnable-track {
-    height: 15px;
-    /*background: #ddd;*/
-    border: none;
-    border-radius: 15px;
-}
-
-input.statutrange[type=range]::-ms-track {
-    height: 15px;
-    /*background: #ddd;*/
-    border: none;
-    border-radius: 15px;
-}
-
-input.statutrange[type=range]::-moz-range-track {
-    height: 15px;
-    /*background: #ddd;*/
-    border: none;
-    border-radius: 15px;
-}
-
 input.statutrange[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
     border: none;
     height: 25px;
     width: 25px;
     border-radius: 50%;
-    /*background: #555;*/
     margin-top: -5px;
     position: relative;
 }
@@ -189,7 +292,6 @@ input.statutrange[type=range]::-ms-thumb {
     height: 25px;
     width: 25px;
     border-radius: 50%;
-    /*background: #555;*/
     margin-top: -5px;
     position: relative;
 }
@@ -200,9 +302,26 @@ input.statutrange[type=range]::-moz-range-thumb {
     height: 16px;
     width: 16px;
     border-radius: 50%;
-    /*background: #555;*/
     margin-top: -5px;
     position: relative;
+}
+
+input.statutrange[type=range]::-webkit-slider-runnable-track {
+    height: 15px;
+    border: none;
+    border-radius: 15px;
+}
+
+input.statutrange[type=range]::-ms-track {
+    height: 15px;
+    border: none;
+    border-radius: 15px;
+}
+
+input.statutrange[type=range]::-moz-range-track {
+    height: 15px;
+    border: none;
+    border-radius: 15px;
 }
 
 input.statutrange[type=range]:focus {
@@ -217,9 +336,7 @@ input.statutrange[type=range]:focus::-webkit-slider-thumb:after {
     transform: translateX(-50%);
     background: #eee;
     border-radius: 5px;
-    /*color: #555;*/
     padding: 5px 10px;
-    /*border: 20px solid #555;*/
 }
 
 input.statutrange[type=range]:focus::-ms-thumb:after {
@@ -230,9 +347,7 @@ input.statutrange[type=range]:focus::-ms-thumb:after {
     transform: translateX(-50%);
     background: #eee;
     border-radius: 5px;
-    /*color: #555;*/
     padding: 5px 10px;
-    /*border: 20px solid #555;*/
 }
 
 input.statutrange[type=range]:focus::-moz-range-thumb:after {
@@ -242,9 +357,7 @@ input.statutrange[type=range]:focus::-moz-range-thumb:after {
     transform: translateX(-50%);
     background: #eee;
     border-radius: 5px;
-    /*color: #555;*/
     padding: 5px 10px;
-    /*border: 20px solid #555;*/
 }
 
 /* Statut range 0 */
@@ -275,6 +388,7 @@ input.range0[type=range]::-moz-range-track {
 
 input.range0[type=range]:focus::-webkit-slider-runnable-track {
     background: #e29592;
+    /*background-image: linear-gradient(to right, #a63433, #9c581e, #887625, #6f8e48, #55a177);*/
 }
 
 input.range0[type=range]:focus::-ms-track {
