@@ -134,7 +134,8 @@
                 <a href="#" class="p-0 btn btn-circle btn-color-3">
                     <i class="fa fa-long-arrow-left fa-2x"></i>
                 </a>
-                <span class="text_color_1 hidden-lg mr-2">Jour précédent</span>
+                <span class="mr-2 text_color_1 hidden-lg">Jour précédent</span>
+                <span class="mr-2 prev_date_text text_color_1 hidden-lg">15/06/2018</span>
             </div>
 
             <div>
@@ -156,7 +157,7 @@
             </div>
         </div>
 
-        <div id="table-1">
+        <div id="table-1" class="px-3">
             <table class="table table-striped">
                 <thead>
                 <tr class="text_color_2">
@@ -168,7 +169,7 @@
                     <th scope="col">Type</th>
                     <th scope="col">Doc.</th>
                     <th scope="col">Début/Durée</th>
-                    <th scope="col">Début/Durée</th>
+                    <th scope="col">Statut</th>
                     <th scope="col" class="text-center">Tout <i class="fa fa-square-o"></i></th>
                 </tr>
                 </thead>
@@ -183,7 +184,16 @@
                         <td>Séance</td>
                         <td><i class="fa fa-file-o"></i></td>
                         <td>15/06/2018 11:30 - 30min</td>
-                        <td>domdo</td>
+                        <td class="text-center">
+                            <input class="statutrange range{{ i % 3 }}" type="range" step="1" min="0" max="2" value="{{ i % 3 }}" title="Statut">
+                            {% if i % 3 == 0 %}
+                                <span>No show</span>
+                            {% elseif i % 3 == 1 %}
+                                <span>À faire</span>
+                            {% else %}
+                                <span>Effectuée</span>
+                            {% endif %}
+                        </td>
                         <td class="text-center"><i class="fa fa-square-o"></i></td>
                     </tr>
                 {% endfor %}
@@ -191,4 +201,8 @@
             </table>
         </div>
     </div>
+{% endblock %}
+
+{% block script %}
+    <script src="{{ asset('bundles/app/js/script_dashboard.js') }}"></script>
 {% endblock %}

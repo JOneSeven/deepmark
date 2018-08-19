@@ -76,7 +76,7 @@
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.10);
     border-radius: 5px;
     background: #fff;
-    padding: 0 10px 10px 10px;
+    padding: 0 30px 10px 30px;
 }
 
 .search-container {
@@ -106,7 +106,7 @@
     position: relative;
     top: -20px;
     padding: 0;
-    padding-left: 10px;
+    /*padding-left: 10px;*/
     border-radius: 5px;
     text-align: center;
 }
@@ -134,6 +134,229 @@ a.onglet-active:hover {
     color: #fff;
 }
 
+.prev_date_text {
+    font-size: 18px;
+    border-bottom: 1px solid;
+}
+
 #table-1 {
     overflow-x: scroll;
+}
+
+/* Statut range generale */
+
+input.statutrange[type=range] {
+    -webkit-appearance: none;
+    background: none;
+    width: 70px;
+}
+
+input.statutrange[type=range]::-webkit-slider-runnable-track {
+    height: 15px;
+    /*background: #ddd;*/
+    border: none;
+    border-radius: 15px;
+}
+
+input.statutrange[type=range]::-ms-track {
+    height: 15px;
+    /*background: #ddd;*/
+    border: none;
+    border-radius: 15px;
+}
+
+input.statutrange[type=range]::-moz-range-track {
+    height: 15px;
+    /*background: #ddd;*/
+    border: none;
+    border-radius: 15px;
+}
+
+input.statutrange[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    /*background: #555;*/
+    margin-top: -5px;
+    position: relative;
+}
+
+input.statutrange[type=range]::-ms-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    /*background: #555;*/
+    margin-top: -5px;
+    position: relative;
+}
+
+input.statutrange[type=range]::-moz-range-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    /*background: #555;*/
+    margin-top: -5px;
+    position: relative;
+}
+
+input.statutrange[type=range]:focus {
+    outline: none;
+}
+
+input.statutrange[type=range]:focus::-webkit-slider-thumb:after {
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background: #eee;
+    border-radius: 5px;
+    /*color: #555;*/
+    padding: 5px 10px;
+    /*border: 20px solid #555;*/
+}
+
+input.statutrange[type=range]:focus::-ms-thumb:after {
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background: #eee;
+    border-radius: 5px;
+    /*color: #555;*/
+    padding: 5px 10px;
+    /*border: 20px solid #555;*/
+}
+
+input.statutrange[type=range]:focus::-moz-range-thumb:after {
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #eee;
+    border-radius: 5px;
+    /*color: #555;*/
+    padding: 5px 10px;
+    /*border: 20px solid #555;*/
+}
+
+/* Statut range 0 */
+
+input.range0[type=range]::-webkit-slider-thumb {
+    background: #cf3530;
+}
+
+input.range0[type=range]::-ms-thumb {
+    background: #cf3530;
+}
+
+input.range0[type=range]::-moz-range-thumb {
+    background: #cf3530;
+}
+
+input.range0[type=range]::-webkit-slider-runnable-track {
+    background: #e29592;
+}
+
+input.range0[type=range]::-ms-track {
+    background: #e29592;
+}
+
+input.range0[type=range]::-moz-range-track {
+    background: #e29592;
+}
+
+input.range0[type=range]:focus::-webkit-slider-runnable-track {
+    background: #e29592;
+}
+
+input.range0[type=range]:focus::-ms-track {
+    background: #e29592;
+}
+
+input.range0[type=range]:focus::-moz-range-track {
+    background: #e29592;
+}
+
+/* Statut range 1 */
+
+input.range1[type=range]::-webkit-slider-thumb {
+    background: #555;
+}
+
+input.range1[type=range]::-ms-thumb {
+    background: #555;
+}
+
+input.range1[type=range]::-moz-range-thumb {
+    background: #555;
+}
+
+input.range1[type=range]::-webkit-slider-runnable-track {
+    background: #ddd;
+}
+
+input.range1[type=range]::-ms-track {
+    background: #ddd;
+}
+
+input.range1[type=range]::-moz-range-track {
+    background: #ddd;
+}
+
+input.range1[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ddd;
+}
+
+input.range1[type=range]:focus::-ms-track {
+    background: #ddd;
+}
+
+input.range1[type=range]:focus::-moz-range-track {
+    background: #ddd;
+}
+
+/* Statut range 2*/
+
+input.range2[type=range]::-webkit-slider-thumb {
+    background: #3a834c;
+}
+
+input.range2[type=range]::-ms-thumb {
+    background: #3a834c;
+}
+
+input.range2[type=range]::-moz-range-thumb {
+    background: #3a834c;
+}
+
+input.range2[type=range]::-webkit-slider-runnable-track {
+    background: #97bca0;
+}
+
+input.range2[type=range]::-ms-track {
+    background: #97bca0;
+}
+
+input.range2[type=range]::-moz-range-track {
+    background: #97bca0;
+}
+
+input.range2[type=range]:focus::-webkit-slider-runnable-track {
+    background: #97bca0;
+}
+
+input.range2[type=range]:focus::-ms-track {
+    background: #97bca0;
+}
+
+input.range2[type=range]:focus::-moz-range-track {
+    background: #97bca0;
 }
