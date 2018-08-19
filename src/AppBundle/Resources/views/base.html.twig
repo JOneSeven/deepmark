@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="{{ asset('bundles/app/bootstrap4/css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Mon style -->
+    <link href="{{ asset('/bundles/app/css/styles_main.css') }}" rel="stylesheet">
+    <link href="{{ asset('/bundles/app/css/styles_responsive_table.css') }}" rel="stylesheet">
+    <link href="{{ asset('bundles/bmatznerfontawesome/css/font-awesome.min.css') }}" rel="stylesheet">
+    {% block css %}{% endblock %}
+</head>
+<body>
+    <aside class="pt-4 px-3">
+        <div class="company_logo text-center">
+            <img src="{{ asset('bundles/app/img/logo_deepmark.png') }}">
+        </div>
+        <hr class="separator">
+
+        <div class="profile">
+            <img src="{{ asset('bundles/app/img/profil_blog3.jpg') }}">
+            <span>Nom prenom</span>
+            <a href="#" class="btn btn_edit_profile"><i class="fa fa-pencil"></i></a>
+        </div>
+        <hr class="separator">
+
+        <ul class="sidebar_list">
+            {% block sidebar_list_element %}{% endblock %}
+
+            <li class="text-center my-3 px-2 py-3">
+                <a href="#">
+                    <i class="mr-2 fa fa-power-off"></i>Déconnexion
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <div class="p-4" id="main-content">
+        <header class="mb-5 d-flex justify-content-between">
+            <div>
+                <a href="#" class="p-0 btn btn-circle btn-color-1">
+                    <i class="fa fa-long-arrow-left fa-2x"></i>
+                </a>
+                <span class="text_color_1">&nbsp;Dashboard</span>
+            </div>
+
+            <div>
+                <div class="d-flex">
+                    <div>
+                        <input name="search" placeholder="Recherche...">
+                        <a href="#" class="p-0 btn btn-circle btn-color-1"><i class="fa fa-search fa-2x"></i></a>
+                    </div>
+                    <div class="ml-4">
+                        <a href="#" class="p-0 btn btn-circle btn-color-2"><i class="fa fa-cog fa-2x"></i></a>
+                    </div>
+                    <div class="ml-4">
+                        <span class="btn btn-circle btn-color-2">
+                            <i class="fa fa-user-circle-o fa-2x"></i>
+                            <i class="pl-3 fa fa-caret-down fa-2x"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="mt-3">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+
+    <script src="{{ asset('bundles/app/bootstrap4/js/bootstrap.js') }}"></script>
+    <script src="{{ asset('bundles/app/js/script_main.js') }}"></script>
+    {% block script %}{% endblock %}
+</body>
+</html>

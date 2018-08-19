@@ -1,0 +1,194 @@
+{% extends "AppBundle::base.html.twig" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('bundles/app/css/styles_dashboard.css') }}">
+{% endblock %}
+
+{% block sidebar_list_element %}
+    <li class="my-3 px-2 py-3 active">
+        <a href="#">
+            <i class="fa fa-dashboard mr-2"></i><span>Dashboard</span>
+        </a>
+    </li>
+    <li class="my-3 px-2 py-3">
+        <a href="#">
+            <i class="fa fa-list mr-2"></i>Listing clients
+        </a>
+    </li>
+    <li class="my-3 px-2 py-3">
+        <a href="#">
+            <i class="fa fa-graduation-cap mr-2"></i>Listing apprenants
+        </a>
+    </li>
+    <li class="my-3 px-2 py-3">
+        <a href="#">
+            <i class="fa fa-glass mr-2"></i>Listing LiveRessource
+        </a>
+    </li>
+    <li class="my-3 px-2 py-3">
+        <a href="#">
+            <i class="fa fa-line-chart mr-2"></i>Mon activité LiveRessource
+        </a>
+    </li>
+    <li class="my-3 px-2 py-3">
+        <a href="#">
+            <i class="fa fa-wrench mr-2"></i>Listing Interventions
+        </a>
+    </li>
+    <li class="my-3 px-2 py-3">
+        <a href="#">
+            <i class="fa fa-signal mr-2"></i>Statistiques
+        </a>
+    </li>
+    <li class="my-3 px-2 py-3">
+        <a href="#">
+            <i class="fa fa-money mr-2"></i>Facturation
+        </a>
+    </li>
+    <li class="my-3 px-2 py-3">
+        <a href="#">
+            <i class="fa fa-address-book mr-2"></i>Ma bibliothèque
+        </a>
+    </li>
+    <li class="my-3 px-2 py-3">
+        <a href="#">
+            <i class="fa fa-file-o mr-2"></i>Documents administratifs
+        </a>
+    </li>
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row d-flex justify-content-between notification-content">
+            <div class="notification-block mt-5">
+                <div class="notification-icon notification-icon-activities">
+                    <i class="fa fa-book fa-3x"></i>
+                </div>
+
+                <div class="notification-text">Activité du jour</div>
+                <div class="notification-number">15</div>
+
+                <div class="notification-footer">
+                    <a href="#" class="btn-color-1">Voir toutes validations<i class="ml-2 fa fa-angle-double-right"></i></a>
+                </div>
+            </div>
+
+            <div class="notification-block mt-5">
+                <div class="notification-icon notification-icon-alerts">
+                    <i class="fa fa-warning fa-3x"></i>
+                </div>
+
+                <div class="notification-text">Alerts</div>
+                <div class="notification-number">5</div>
+
+                <div class="notification-footer">
+                    <a href="#" class="btn-color-1">Voir toutes validations<i class="ml-2 fa fa-angle-double-right"></i></a>
+                </div>
+            </div>
+
+            <div class="notification-block mt-5">
+                <div class="notification-icon notification-icon-ressouces">
+                    <i class="fa fa-leaf fa-3x"></i>
+                </div>
+
+                <div class="notification-text">Ressources nécessaires du mois</div>
+                <div class="notification-number">41</div>
+
+                <div class="notification-footer">
+                    <a href="#" class="btn-color-1">Voir toutes validations<i class="ml-2 fa fa-angle-double-right"></i></a>
+                </div>
+            </div>
+
+            <div class="notification-block mt-5">
+                <div class="notification-icon notification-icon-validations">
+                    <i class="fa fa-check fa-3x"></i>
+                </div>
+
+                <div class="notification-text">Validations</div>
+                <div class="notification-number">12</div>
+
+                <div class="notification-footer">
+                    <a href="#" class="btn-color-1">Voir toutes validations<i class="ml-2 fa fa-angle-double-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="second-content mt-5">
+        <div class="onglet-btn-container d-flex">
+            <a class="onglet onglet-active" href="#">Toutes les activités du jour</a>
+
+            <a class="onglet" href="#">Toutes les activités du mois</a>
+        </div>
+
+        <div class="search-container mb-3">
+            <input type="text" placeholder="Recherche...">
+            <span><i class="fa fa-search"></i></span>
+        </div>
+        <div class="clearfix"></div>
+
+        <div class="mb-5 d-flex justify-content-between">
+            <div>
+                <a href="#" class="p-0 btn btn-circle btn-color-3">
+                    <i class="fa fa-long-arrow-left fa-2x"></i>
+                </a>
+                <span class="text_color_1 hidden-lg mr-2">Jour précédent</span>
+            </div>
+
+            <div>
+                <div class="d-flex">
+                    <div>
+                        <span class="text_color_1 hidden-lg mr-2">Aller à</span>
+                        <a href="#" class="p-0 btn btn-circle btn-color-3">
+                            <i class="fa fa-calendar fa-2x"></i>
+                        </a>
+                    </div>
+
+                    <div class="ml-4">
+                        <span class="text_color_1 hidden-lg mr-2">Jour suivant</span>
+                        <a href="#" class="p-0 btn btn-circle btn-color-3">
+                            <i class="fa fa-long-arrow-right fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="table-1">
+            <table class="table table-striped">
+                <thead>
+                <tr class="text_color_2">
+                    <th scope="col">Org.</th>
+                    <th scope="col">Intervention</th>
+                    <th scope="col">Thème</th>
+                    <th scope="col">Live Trainer</th>
+                    <th scope="col">Apprenant</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Doc.</th>
+                    <th scope="col">Début/Durée</th>
+                    <th scope="col">Début/Durée</th>
+                    <th scope="col">Tout <i class="fa fa-square-o"></i></th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for i in 1..10 %}
+                    <tr class="text_color_1">
+                        <th scope="row"><img src="{{ asset('bundles/app/img/Logo_BNP.png') }}" width="100px"></th>
+                        <td>NPS Résoudre un Christian Antoine Séance 15/06/2018 Promoteur</td>
+                        <td>Résoudre un Christian Antoine Séance 15/06/2018 Promoteur problème managerial</td>
+                        <td>Christian COURRIER</td>
+                        <td>Antoine BRABANT</td>
+                        <td>Séance</td>
+                        <td><i class="fa fa-file-o"></i></td>
+                        <td>15/06/2018 11:30 - 30min</td>
+                        <td>domdo</td>
+                        <td><i class="fa fa-square-o"></i></td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

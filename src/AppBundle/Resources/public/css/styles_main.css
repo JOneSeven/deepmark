@@ -1,0 +1,153 @@
+/*
+@font-face {
+    font-family: "fapl300";
+    src: url("../font/FontAwesome5ProLight300.otf");
+}
+
+@font-face {
+    font-family: "fapl400";
+    src: url("../font/FontAwesome5ProRegular400.otf");
+}
+
+@font-face {
+    font-family: "fapl900";
+    src: url("../font/FontAwesome5ProSolid900.otf");
+}
+*/
+
+/* Bouton */
+
+.btn-circle {
+    display: inline-table;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+}
+
+.btn-circle-2 {
+    display: inline-table;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+}
+
+.btn-circle i {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.btn-color-1 {
+    background-color: #fff;
+    color: #f5ba45;
+}
+
+a.btn-color-1:hover {
+    background-color: #fff;
+    color: #f5ba45;
+}
+
+.btn-color-2 {
+    background-color: #f5ba45;
+    color: #fff;
+}
+
+a.btn-color-2:hover {
+    color: #fff;
+}
+
+.btn-color-3 {
+    background-color: #fff;
+    border: 2px solid #808080;
+    color: #808080;
+}
+
+a.btn-color-3:hover {
+    color: #808080;
+}
+
+/* Sidebar */
+
+aside {
+    background: linear-gradient(
+            rgba(0, 71, 113, 0.6),
+            rgba(0, 71, 113, 0.6)
+    ), url('../img/architecture-buildings.jpg');
+    background-size: cover;
+    background-position: right;
+    position: fixed;
+    box-shadow: 1px 0 3px rgba(0, 0, 0, 0.10);
+    width: 300px;
+    height: 100%;
+    color: #fff;
+    font-weight: lighter;
+}
+
+aside a {
+    color: #fff;
+}
+
+aside a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+aside .company_logo img {
+    height: 70px;
+    width: auto;
+}
+
+aside hr.separator {
+    border-top: 1px solid rgb(255, 255, 255);
+}
+
+aside .profile img {
+    border-radius: 50%;
+    width: 50px;
+}
+
+aside .btn_edit_profile {
+    background: #f5ba44;
+    margin-left: 10px;
+}
+
+aside .sidebar_list {
+    list-style: none;
+    padding: 0;
+    height: 670px;
+    overflow-y: scroll;
+}
+
+aside .sidebar_list a:hover {
+    color: #f5ba45;
+    text-decoration: none;
+}
+
+aside .sidebar_list .active {
+    background-color: #f5ba45;
+    border-radius: 3px;
+}
+
+aside .deconnexion {
+    bottom: 50px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+}
+
+#main-content {
+    margin-left: 300px;
+    height: 100%;
+    background: #e2e2e2;
+}
+
+/* Header*/
+
+header input {
+    border: 0;
+    background: transparent;
+    border-bottom: 1px solid #ccc;
+}
+
+header input:hover, header input:focus {
+    outline: none;
+}
